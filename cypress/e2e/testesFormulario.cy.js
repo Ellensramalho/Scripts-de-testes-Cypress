@@ -10,6 +10,10 @@ describe('Visitar formulário', () => {
     cy.get('#telefone').type('(83) 12345-6789')
     cy.get('#idade').type('25')
     cy.get('#dataNasc').type('2025-11-04')
-    
+    cy.get('label[for="feminino"]').click()
+    cy.get("#opcoes").select('opcao2')
+    // Subir arquivo 
+      cy.get('#arquivo').attachFile('Gato.jpg')
   })
 })
+  
