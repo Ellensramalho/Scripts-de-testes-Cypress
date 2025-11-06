@@ -14,6 +14,18 @@ describe('Visitar formulário', () => {
     cy.get("#opcoes").select('opcao2')
     // Subir arquivo 
       cy.get('#arquivo').attachFile('Gato.jpg')
+
+       cy.get('#nivelSatisfacao')
+      .invoke('val', 8)
+      .trigger('input') 
+
+      cy.get('#site').type('https://dados.com')
+
+      cy.get('input[name="linguagens"]').check(['JavaScript', 'Python'])
+
+      cy.get('#comentarios').type('Este é um comentário de teste.')
+
+      cy.get('#termos').check()
   })
 })
   
