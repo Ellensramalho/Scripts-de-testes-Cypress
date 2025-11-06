@@ -15,12 +15,14 @@ describe('Visitar formulário', () => {
     // Subir arquivo 
       cy.get('#arquivo').attachFile('Gato.jpg')
 
+      //Nível de sastifação
        cy.get('#nivelSatisfacao')
       .invoke('val', 8)
       .trigger('input') 
 
       cy.get('#site').type('https://dados.com')
 
+      //Selecionar mais de uma linguagem de programação
       cy.get('input[name="linguagens"]').check(['JavaScript', 'Python'])
 
       cy.get('#comentarios').type('Este é um comentário de teste.')
