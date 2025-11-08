@@ -28,6 +28,8 @@ describe('Visitar formulário', () => {
       cy.get('#comentarios').type('Este é um comentário de teste.')
 
       cy.get('#termos').check()
+
+      cy.get('button[type="submit"]').click()
   })
 })
   
