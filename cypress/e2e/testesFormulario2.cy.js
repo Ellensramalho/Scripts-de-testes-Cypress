@@ -23,6 +23,6 @@ describe('Visitar formulário', () => {
         cy.get('#telefone')
             .type('abc!@#(83)99999-9999xyz')
             .invoke('val')
-            .should('eq', '(83)99999-9999') // verifica que só sobrou o permitido
+            .should('eq', '(83)99999-9999') 
     })
 })
