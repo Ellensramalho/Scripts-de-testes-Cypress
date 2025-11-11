@@ -19,10 +19,11 @@ describe('Visitar formulário', () => {
             .should('eq', 'usuario@gmail.com')
     })
 
+    // O campo de telefone deve aceitar apenas números, parenteses e traços.
     it('Verificar se o campo de telefone aceita apenas números', () => {
-        cy.get('#telefone')
-            .type('abc!@#(83)99999-9999xyz')
-            .invoke('val')
-            .should('eq', '(83)99999-9999') 
-    })
-})
+         cy.get('#telefone')
+      .type('abc!@#(83)99999-9999xyz')
+      .invoke('val')
+      .should('eq', '(83)99999-9999')
+  })
+}) 
